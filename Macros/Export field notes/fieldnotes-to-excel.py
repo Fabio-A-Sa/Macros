@@ -39,13 +39,13 @@ def search ():
 def export ():
     
     import xlwt
-    import xlrd
+    from xlwt import Workbook
     from datetime import datetime
 
     current_day = datetime.now()
     date = current_day.strftime("%Y-%m-%d")
-    sheet = xlwt.Workbook()
-    Excel = sheet.add_sheet(date)
+    wb = Workbook()
+    Excel = wb.add_sheet(date)
     os.rename("geocache_visits.txt", "drafts.txt")
     drafts = open("drafts.txt", "r+") # Read and paste
 
@@ -69,8 +69,9 @@ def export ():
 
         y += 1
 
-    sheet.save("Logs " + date + ".xls")
+    wb.save("Logs " + date + ".xls")
     drafts.close()
+    os.remove("drafts.txt")
 
 
 if __name__ == "__main__":
