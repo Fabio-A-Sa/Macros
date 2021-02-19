@@ -38,14 +38,14 @@ def search ():
 
 def export ():
     
-    import xlwt
-    from xlwt import Workbook
+    import xlsxwriter
+    from xlsxwriter import Workbook
     from datetime import datetime
 
     current_day = datetime.now()
     date = current_day.strftime("%Y-%m-%d")
-    wb = Workbook()
-    Excel = wb.add_sheet(date)
+    workbook = xlsxwriter.Workbook("Logs " + date + ".xls")
+    Excel = workbook.add_worksheet(date)
     os.rename("geocache_visits.txt", "drafts.txt")
     drafts = open("drafts.txt", "r+") # Read and paste
 
@@ -69,8 +69,8 @@ def export ():
 
         y += 1
 
-    wb.save("Logs " + date + ".xls")
     drafts.close()
+    workbook.close()
     os.remove("drafts.txt")
 
 
