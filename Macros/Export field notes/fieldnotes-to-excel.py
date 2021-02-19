@@ -56,31 +56,42 @@ def export ():
     for flag in range(len(top)):
         Excel.write(y, flag, top[flag])
 
-    for y, log in enumerate(DATA):
+    y = 1
+    for index in range(0, len(DATA), 2):
 
-        if y == 0:
+        log = DATA[index]
 
+        if y == 1:
             log = log[2:6] + (log[6:]).replace("T", ",").replace("Z", "")
-            items = log.split(",")
-
-            x = 0
-            for item in items:
-                Excel.write(y, x, item)
-                x += 1
-
         else:
-
             log = log[:6] + (log[6:]).replace("T", ",").replace("Z", "")
-            items = log.split(",")
 
-            x = 0
-            for item in items:
+        items = log.split(",")
+
+        x = 0
+        for i in items:
+            
+            item = ""
+            for char in i:
+                if char == " ":
+                    continue
+                else:
+                    item = item + char
+            
+            if x == 0:
+                print(item)
+                url = "http://coord.info/" + item
+                print(url)
+                Excel.write_url(str("A" + str(y)), url , string = "some")
+            else:
                 Excel.write(y, x, item)
-                x += 1
+
+            x += 1
+        y += 1
 
     drafts.close()
-    os.remove("drafts.txt")
     workbook.close()
+    os.remove("drafts.txt")
 
 
 if __name__ == "__main__":
