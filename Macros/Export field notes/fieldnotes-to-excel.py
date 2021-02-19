@@ -8,15 +8,27 @@ import shutil
 def search ():
 
     pwd = os.getcwd()
-    field_note = "E:\Garmin\geocache_visits.txt" # --> "F:same"
+    enable_plugs = "D E F G H".split(" ")
+    ways = [ "{}:\Garmin\geocache_visits.txt".format(plug) for plug in enable_plugs]
+    pointer = False
+    counter = 0
 
-    try:
-        shutil.copy(field_note, pwd)
-        return export ()
+    while (pointer != True):
+        
+        field_note = ways[counter]
 
-    except NotADirectoryError:
-        error = "This file cannot be found"
-        return error
+        try:
+            shutil.copy(field_note, pwd)
+            pointer = pointer or True
+            return export ()
+
+        except FileNotFoundError:
+            error = "Directory {} cannot be found".format(field_note)
+            pointer = pointer and True
+            print(error)
+            counter = counter + 1
+            continue
+
 
 
 def export ():
