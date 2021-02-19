@@ -8,12 +8,12 @@ import shutil
 def search ():
 
     pwd = os.getcwd()
-    enable_plugs = "D E F G H".split(" ")
-    ways = [ "{}:\Garmin\geocache_visits.txt".format(plug) for plug in enable_plugs]
+    enable_plugs = "A B C".split(" ")
+    ways = ["{}:\Garmin\geocache_visits.txt".format(plug) for plug in enable_plugs]
     pointer = False
     counter = 0
 
-    while (pointer != True):
+    while (pointer != True and counter < len(ways)):
         
         field_note = ways[counter]
 
@@ -25,11 +25,14 @@ def search ():
         except FileNotFoundError:
             error = "Directory {} cannot be found".format(field_note)
             print(error)
-            
+
             pointer = pointer and True
             counter = counter + 1
             continue
-
+    
+    main_error = "GPS is not connected"
+    print (main_error)
+    return None
 
 
 def export ():
