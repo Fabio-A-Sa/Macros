@@ -44,7 +44,7 @@ def export ():
 
     current_day = datetime.now()
     date = current_day.strftime("%Y-%m-%d")
-    workbook = xlsxwriter.Workbook("Logs " + date + ".xls")
+    workbook = xlsxwriter.Workbook("Logs " + date + ".xlsx")
     Excel = workbook.add_worksheet(date)
     os.rename("geocache_visits.txt", "drafts.txt")
     drafts = open("drafts.txt", "r+") # Read and paste
@@ -70,8 +70,8 @@ def export ():
         y += 1
 
     drafts.close()
-    workbook.close()
     os.remove("drafts.txt")
+    workbook.close()
 
 
 if __name__ == "__main__":
