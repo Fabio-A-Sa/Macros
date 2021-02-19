@@ -4,10 +4,8 @@ End Function
 
 
 Sub Caracol()
-'
-' Caracol Macro
-'
-'
+
+' Macro para GC92dgw
 
 Dim i As Integer
 Dim n As Integer
@@ -18,12 +16,8 @@ Dim Lat2 As Integer
 Dim Long1 As Integer
 Dim Long2 As Integer
 
-
 Dim LatP As Double
 Dim LongP As Double
-
-
-
 
 Dim dblAcos As Double
 i = 22
