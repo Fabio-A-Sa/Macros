@@ -78,13 +78,13 @@ def export ():
                 else:
                     item = item + char
             
-            if x == 0:
-                print(item)
-                url = "http://coord.info/" + item
-                print(url)
-                Excel.write_url(str("A" + str(y)), url , string = "some")
-            else:
-                Excel.write(y, x, item)
+ #           if x == 0:
+    #            print(item)
+     #           url = "http://coord.info/" + item
+   #             print(url)
+   #             Excel.write_url(str("A" + str(y)), url , string = "some")
+    #        else:
+            Excel.write(y, x, item)
 
             x += 1
         y += 1
