@@ -56,18 +56,27 @@ def export ():
     for flag in range(len(top)):
         Excel.write(y, flag, top[flag])
 
-    y = 1
-    for log in DATA:
+    for y, log in enumerate(DATA):
 
-        log = log[:6] + (log[6:]).replace("T", ",").replace("Z", "")
-        items = log.split(",")
+        if y == 0:
 
-        x = 0
-        for item in items:
-            Excel.write(y, x, item)
-            x += 1
+            log = log[2:6] + (log[6:]).replace("T", ",").replace("Z", "")
+            items = log.split(",")
 
-        y += 1
+            x = 0
+            for item in items:
+                Excel.write(y, x, item)
+                x += 1
+
+        else:
+
+            log = log[:6] + (log[6:]).replace("T", ",").replace("Z", "")
+            items = log.split(",")
+
+            x = 0
+            for item in items:
+                Excel.write(y, x, item)
+                x += 1
 
     drafts.close()
     os.remove("drafts.txt")
