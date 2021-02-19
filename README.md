@@ -1,3 +1,3 @@
-# Excel Marcros using Visual Basic for Aplications
+# Excel Macros using Visual Basic for Aplications
 
 <img alignment = "center" src = "Images\Scheme.png">
