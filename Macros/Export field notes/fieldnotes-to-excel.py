@@ -2,13 +2,14 @@
 
 import os
 import shutil
+from string import ascii_letters as abc
 
 # Functions
 
 def search ():
 
     pwd = os.getcwd()
-    enable_plugs = "A B C".split(" ")
+    enable_plugs = [letter for letter in abc.upper()]
     ways = ["{}:\Garmin\geocache_visits.txt".format(plug) for plug in enable_plugs]
     pointer = False
     counter = 0
@@ -58,7 +59,8 @@ def export ():
     y = 1
     for log in DATA:
 
-        items = log.replace("T", ",").replace("Z", "").split(",")
+        log = log[:6] + (log[6:]).replace("T", ",").replace("Z", "")
+        items = log.split(",")
 
         x = 0
         for item in items:
