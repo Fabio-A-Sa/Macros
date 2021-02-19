@@ -33,14 +33,26 @@ def export ():
     drafts = open("drafts.txt", "r+") # Read and paste
 
     DATA = drafts.readlines()
-    for i in range(len(DATA)):
-        row = DATA[i].split(",") 
+    top = "Cache Date Hour Found? Notes".strip().split(" ")
 
-        for j in range(len(row)):
-            Excel.write(i, j, row[j])
+    y = 0
+    for flag in range(len(top)):
+        Excel.write(y, flag, top[flag])
+
+    y = 1
+    for log in DATA:
+
+        items = log.replace("T", ",").replace("Z", "").split(",")
+
+        x = 0
+        for item in items:
+            Excel.write(y, x, item)
+            x += 1
+
+        y += 1
 
     sheet.save("Logs " + date + ".xls")
-    drafts.delete()
+    drafts.close()
 
 
 if __name__ == "__main__":
