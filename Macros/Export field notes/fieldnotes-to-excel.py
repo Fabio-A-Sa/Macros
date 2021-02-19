@@ -40,7 +40,7 @@ def export ():
             Excel.write(i, j, row[j])
 
     sheet.save("Logs " + date + ".xls")
-    drafts.close()
+    drafts.delete()
 
 
 if __name__ == "__main__":
