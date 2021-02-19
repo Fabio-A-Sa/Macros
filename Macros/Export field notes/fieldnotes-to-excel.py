@@ -24,8 +24,9 @@ def search ():
 
         except FileNotFoundError:
             error = "Directory {} cannot be found".format(field_note)
-            pointer = pointer and True
             print(error)
+            
+            pointer = pointer and True
             counter = counter + 1
             continue
 
