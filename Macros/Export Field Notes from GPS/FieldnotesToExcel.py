@@ -8,6 +8,10 @@ from string import ascii_letters as abc
 
 def search ():
 
+    # Function that searches the computer input where the GPS is connected in a linear way to directly 
+    # extract the field notes file. 
+    # The file is copied and transferred from the device to the current directory.
+
     pwd = os.getcwd()
     enable_plugs = [letter for letter in abc.upper()]
     ways = ["{}:\Garmin\geocache_visits.txt".format(plug) for plug in enable_plugs]
@@ -38,6 +42,9 @@ def search ():
 
 def export ():
     
+    # Function that separates the content of the field note into five columns.
+    # Exports to Excel file following the .cvs properties
+
     import xlsxwriter
     from xlsxwriter import Workbook
     from datetime import datetime
@@ -80,6 +87,7 @@ def export ():
     os.remove("drafts.txt")
 
 
+# Main function
+
 if __name__ == "__main__":
     search ()
-
