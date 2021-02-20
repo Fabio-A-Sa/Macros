@@ -1,5 +1,7 @@
 Sub Normalization()
 
+    'comment
+
     Columns("A:E").Select
     Selection.Columns.AutoFit
     
