@@ -69,9 +69,11 @@ def export ():
         log = DATA[index]
 
         if y == 1:
-            log = log[2:6] + (log[6:]).replace("T", ",").replace("Z", "")
+            log = log[1:10] + (log[10:]).replace("T", ",")
+            log = log[1:10] + (log[10:]).replace("Z", "")
         else:
-            log = log[1:6] + (log[6:]).replace("T", ",").replace("Z", "")
+            log = log[:10] + (log[10:]).replace("T", ",")
+            log = log[:10] + (log[10:]).replace("Z", "")
 
         items = log.split(",")
 
