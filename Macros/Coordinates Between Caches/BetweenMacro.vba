@@ -4,6 +4,10 @@ Function ArcCos(RadAngle)
     ArcCos = Atn(-RadAngle / Sqr(-RadAngle * RadAngle + 1)) + 2 * Atn(1)
 End Function
 
+Function ArcCos(RadAngle)
+    ArcCos = Atn(-RadAngle / Sqr(-RadAngle * RadAngle + 1)) + 2 * Atn(1)
+End Function
+
 Sub Area Between()
 
 ' Macro that determines the area between caches and the respective coordinates in N / W format GGG MM.SSS in GMT.
