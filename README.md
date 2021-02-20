@@ -5,7 +5,7 @@
 
 ## Contents
 1. [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros-Excel#1-export-field-notes-from-gps-to-excel)
-2. [Get all Coordinates between Geocaches]()
+2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros-Excel#2-get-all-coordinates-between-geocaches)
 3. [Create a Database of words to bomb the solution checker. Brute Force.]()
 4. (...)
 <br/>
@@ -52,9 +52,18 @@ def Points_to_Area (points):
     return "Available area: {}".format(area))
 ```
 
+<br/>
 
-<img alignment = "center" src = "Images\Scheme.png">
+<img alignment = "center" src = "Images\Scheme.png" title = "Areas" >
 
+<br/>
+
+## 3. Create a Database of words to bomb the solution checker.
+
+Soon
+
+
+<br/>
 <br/>
 
 ## License
