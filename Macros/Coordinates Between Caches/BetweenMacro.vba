@@ -3,9 +3,9 @@ Function ArcCos(RadAngle)
 End Function
 
 
-Sub Caracol()
+Sub Area Between()
 
-' Macro para GC92dgw
+' Macro that determines the area between caches and the respective coordinates in N / W format GGG MM.SSS in GMT.
 
 Dim i As Integer
 Dim n As Integer
