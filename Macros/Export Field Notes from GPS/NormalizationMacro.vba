@@ -1,12 +1,14 @@
 Sub Normalization()
 
 '
-' Macro1 Macro
+' Macro that deals with formatting the table and data imported from the 
+' Python script in order to be more easily viewed.
 '
 
     Columns("A:E").Select
     Selection.Columns.AutoFit
 
+    ' Auto delimited size of columns
     With Selection
         .HorizontalAlignment = xlGeneral
         .VerticalAlignment = xlCenter
@@ -19,6 +21,7 @@ Sub Normalization()
         .MergeCells = False
     End With
 
+    ' Auto xlCenter 
     With Selection
         .HorizontalAlignment = xlCenter
         .VerticalAlignment = xlCenter
@@ -31,6 +34,7 @@ Sub Normalization()
         .MergeCells = False
     End With
 
+    ' Header Bold
     Rows("1:1").Select
     Selection.Font.Bold = True
     Columns("A:A").Select
@@ -41,6 +45,7 @@ Sub Normalization()
     Selection.Borders(xlDiagonalDown).LineStyle = xlNone
     Selection.Borders(xlDiagonalUp).LineStyle = xlNone
 
+    ' Header gray
     With Selection.Borders(xlEdgeLeft)
         .LineStyle = xlContinuous
         .ColorIndex = xlAutomatic
@@ -48,12 +53,14 @@ Sub Normalization()
         .Weight = xlThick
     End With
 
+    ' First column gray
     With Selection.Borders(xlEdgeTop)
         .LineStyle = xlContinuous
         .ColorIndex = xlAutomatic
         .TintAndShade = 0
         .Weight = xlThick
     End With
+
 
     With Selection.Borders(xlEdgeBottom)
         .LineStyle = xlContinuous
@@ -87,6 +94,7 @@ Sub Normalization()
     Range("A1").Activate
     ActiveWindow.SmallScroll Down:=-30
 
+    ' Center and Middle
     With Selection.Interior
         .Pattern = xlSolid
         .PatternColorIndex = xlAutomatic
