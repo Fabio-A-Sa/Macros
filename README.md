@@ -14,8 +14,8 @@
 
 ## 1. Export Field Notes from GPS to Excel
 
-Extract the relevant information, the field notes, from the GPS that is connected to any of the computer's inputs. It serves mainly to check for any mistakes made when pointing out before sending to [GSAK](https://gsak.net/index.php) application. In a first phase, Python extracts the main file and creates an Excel sheet with the data, line by line. Then the data is processed by a Macro in Visual Basic to make it more readable.
-Script compatible with all Garmin eTrex X category GPS.
+Extract the relevant information, the field notes, from the GPS that is connected to any of the computer's inputs. It serves mainly to check for any mistakes made when pointing out before sending to [GSAK](https://gsak.net/index.php) application. In a first phase, Python extracts the main file and creates an Excel sheet with the data, line by line. Then the data is processed by a Macro in Visual Basic to make it more readable.<br/>
+Script compatible with all Garmin eTrex X GPS's category.
 
 <img alignment = "center" src = "Images\Export.png ">
 
