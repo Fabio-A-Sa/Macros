@@ -63,35 +63,31 @@ def export ():
 
         if y == 1:
             log = log[2:6] + (log[6:]).replace("T", ",").replace("Z", "")
+            print(log)
         else:
             log = log[:6] + (log[6:]).replace("T", ",").replace("Z", "")
+            print(log)
 
         items = log.split(",")
 
         x = 0
         for i in items:
             
-            item = ""
-            for char in i:
-                if char == " ":
-                    continue
-                else:
-                    item = item + char
+            item = "".join(i.split(" "))
             
- #           if x == 0:
-    #            print(item)
-     #           url = "http://coord.info/" + item
-   #             print(url)
-   #             Excel.write_url(str("A" + str(y)), url , string = "some")
-    #        else:
-            Excel.write(y, x, item)
+            if x == 0:
+                Excel.write(y, x, "testenormal")
+                #url = "http://coord.info/" + item
+                #Excel.write_url(str("A" + str(y)), url , string = "some")
+            else:
+                Excel.write(y, x, item)
 
             x += 1
         y += 1
 
     drafts.close()
     workbook.close()
-    os.remove("drafts.txt")
+    #os.remove("drafts.txt")
 
 
 if __name__ == "__main__":
