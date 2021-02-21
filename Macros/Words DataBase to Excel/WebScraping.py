@@ -28,6 +28,7 @@ def get_text (html, alphabetic_order):
                         'nesta', 'porém', 'esta', 'da', 'do', 'n', 'w', 'ac', 'dc', 'ad', 'este',
                         'nas', 'tem', 'are', 'inc', 'if', 'more', 'us', 'd', 'for', 'be','das',
                         'dos', 'com', 'in', 'pela', 'pelo', 'pelas', 'pelos', 'isto', 'aquilo',
+                        'by', 'que', 'cuja', 'seu', 'sua', 'foi', 'nos', 'ao', 'aos', 'à', 'à',
                        ]
             
         for line in lines:
@@ -82,10 +83,12 @@ def get_text (html, alphabetic_order):
 
 def to_excel (content):
     
+    global date
+    global current_directory
     current_directory = pwd()
     current_day = datetime.now()
-    date = current_day.strftime(" %Y-%m-%d")
-    title = "DataBase " + content[0].capitalize() + date
+    date = current_day.strftime("%Y-%m-%d")
+    title = "DataBase " + content[0].capitalize() + " " + date
 
     workbook = xlsxwriter.Workbook(title + ".xlsx")
     Excel = workbook.add_worksheet(date)
@@ -100,7 +103,14 @@ def to_excel (content):
     x = 0
     y = 2
     for word in content:
-        print("")
+        Excel.write(y, x, word)
+        x += 1
+        if x == 10:
+            x = 0
+            y += 1
+            
+        else:
+            continue
     
     workbook.close()
 
@@ -115,7 +125,7 @@ def bomb_checker ():
 
 # Beginning
 
-url = "https://www.geocaching.com/geocache/GC8FKWV_quinto-imperio"
+url = "https://pt.wikipedia.org/wiki/Portugal"
 alphabetic_order = False
 
 if __name__ == "__main__":
