@@ -10,18 +10,50 @@ import requests
 
 def do_request (link):
 
-    request = requests.get(link)
-    soup = BeautifulSoup(request, 'lxml')
-    important = soup.find_all('p').get_text()
-    print(important)
+    html = requests.get(link)
+    return get_text(html.text)
 
 
-def get_text ():
-    return content
+def get_text (html):
+    
+    def normalize (lines):
+        
+        words = []
+        trash_words = ['a', 'as', 'e', 'o', 'os', 'de', 'por', 'para', 'um', 'uma', 'uns']
+        
+        
+        
+        return alist
+    
+    content = [] # Empty list
+    trash_words = ['a', 'as', 'e', 'o', 'os', 'de', 'por', 'para', 'um', 'uma', 'uns']
+    lines = BeautifulSoup(html, 'lxml')
+    
+    titles = lines.find_all('title')
+    content.append(titles)
+    
+    index = 0
+    flag = True
+    while flag:
+        try:
+            content.append(lines.find_all('p')[index].getText())
+            index = index + 1
+            flag = flag and True
+            
+        except:
+            flag = flag and False
+            continue
+            
+            
+    print(content)
 
 
 def to_excel (content):
+    
+    
+    
     return None
+
 
 # Beginning
 
