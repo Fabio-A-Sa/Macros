@@ -108,10 +108,7 @@ def to_excel (content):
         if x == 10:
             x = 0
             y += 1
-            
-        else:
-            continue
-    
+
     workbook.close()
 
 
