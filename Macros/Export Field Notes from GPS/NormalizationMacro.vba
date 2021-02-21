@@ -1,10 +1,14 @@
 Sub Normalization()
 
 '
-' Macro that deals with formatting the table and data imported from the 
+' Macro that deals with formatting the table and data imported from the
 ' Python script in order to be more easily viewed.
 '
 
+    Sheets(1).Select
+    Folha1.Unprotect "password"
+    Application.ScreenUpdating = False
+    
     Columns("A:E").Select
     Selection.Columns.AutoFit
 
@@ -21,7 +25,7 @@ Sub Normalization()
         .MergeCells = False
     End With
 
-    ' Auto xlCenter 
+    ' Auto xlCenter
     With Selection
         .HorizontalAlignment = xlCenter
         .VerticalAlignment = xlCenter
@@ -102,5 +106,11 @@ Sub Normalization()
         .TintAndShade = -0.349986266670736
         .PatternTintAndShade = 0
     End With
+
+    Folha1.Protect "password"
+    Application.ScreenUpdating = True
+    ActiveWorkbook.Save
+    
+    MsgBox ("Macro successfully executed")
 
 End Sub
