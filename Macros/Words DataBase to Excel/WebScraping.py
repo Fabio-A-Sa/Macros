@@ -10,7 +10,7 @@ from datetime import datetime
 
 # Functions
 
-def do_request (link, alphabetic_orderphabetic_order):
+def do_request (link, alphabetic_order):
     
     html = requests.get(link)
     return get_text(html.text, alphabetic_order)
@@ -120,10 +120,14 @@ def bomb_checker ():
     return None
 
 
-# Beginning
+def start ():
 
-url = "https://pt.wikipedia.org/wiki/Portugal"
-alphabetic_order = False
+    url = str(input("Link: "))
+    answer = str(input("Alphabetic order? Yes/No: "))
+    alphabetic_order = True if answer.lower() == "yes" else False
+
+    return do_request (url, alphabetic_order)
+
 
 if __name__ == "__main__":
-    do_request (url, alphabetic_order)
+    start()
