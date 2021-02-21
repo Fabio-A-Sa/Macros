@@ -4,9 +4,6 @@ Function ArcCos(RadAngle)
     ArcCos = Atn(-RadAngle / Sqr(-RadAngle * RadAngle + 1)) + 2 * Atn(1)
 End Function
 
-Function ArcCos(RadAngle)
-    ArcCos = Atn(-RadAngle / Sqr(-RadAngle * RadAngle + 1)) + 2 * Atn(1)
-End Function
 
 Sub Area Between()
 
