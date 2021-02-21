@@ -36,6 +36,8 @@ void Area_to_points (double area) {
     points = floor(pow((((sqrt(area))/1.39)+1),2));
     cout << "Number of points: " << points << endl;
 }
+
+int main () { cout << Area_to_points( x ) << endl; return 0; }
 ```
 
 On the other hand, if we want to obtain the area taking into account the number of coordinates generated, we use the function in Python:
