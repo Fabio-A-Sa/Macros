@@ -73,15 +73,15 @@ In addition, all words will be placed separately, 10 per line, in all available 
 
 <br/>
 
-<img alignment = "center" src = "Images\Part1.png" title = "Areas" >
+<img alignment = "center" src = "Images\Part1.png" title = "DataBase" >
 
 ### Second part: Use them with Brute Force.
 
-more
+Use Excel as a DataBase of previously selected and filtered words. Each word is injected into the verifier website through a bot, where it is tested. If you hit the key, it saves all in a text file (date, time, solution, resulting HTML code) and break a loop. If does not work, the bot returns to the database to push next word. The cycle continues at a frequency of approximately one word per minute (frequency adaptable to each situation) until the entire database is consumed.
 
 <br/>
 
-<img alignment = "center" src = "Images\Part2.png" title = "Areas" >
+<img alignment = "center" src = "Images\Part2.png" title = "Forced" >
 
 <br/>
 
