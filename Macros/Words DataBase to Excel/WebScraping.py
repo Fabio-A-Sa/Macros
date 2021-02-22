@@ -112,14 +112,6 @@ def to_excel (content):
     workbook.close()
 
 
-def bomb_checker ():
-        
-    # In future, this function will be able to get words in current worksheet
-    # and push 10 words automatically every 10 minutes
-    
-    return None
-
-
 def start ():
 
     url = str(input("Link: "))
