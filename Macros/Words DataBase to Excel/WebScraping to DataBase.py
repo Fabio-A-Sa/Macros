@@ -52,8 +52,6 @@ def get_text (html):
                             
                     if not flag and word != "":
                         norm.append(word)
-                        
-        print(len(norm)) 
         
         if alphabetic_order:
             return sorted(norm)
@@ -78,7 +76,6 @@ def get_text (html):
             continue
             
     words = normalize(content)
-    print(words)
     return excel(words)
 
 
