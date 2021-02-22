@@ -1,4 +1,4 @@
-# Excel Macros using Visual Basic for Aplications (VBA)
+# Macros using VisualBasic, C++ and Python
 
 <img alignment = "center" src = "Images\Main.png" title = "Header" >
 <br/>
@@ -6,14 +6,14 @@
 ## Contents
 1. [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros-Excel#1-export-field-notes-from-gps-to-excel)
 2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros-Excel#2-get-all-coordinates-between-geocaches)
-3. [Create a Database of words to bomb the solution checker. Brute Force.](https://github.com/Fabio-A-Sa/Macros-Excel#3-create-a-database-of-words-to-bomb-the-solution-checker)
-4. (...)
+3. [Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros-Excel#3-create-a-database-of-words-to-bomb-the-solution-checker)
+4. [Periodic auto-backup of all my web pages]()
 <br/>
 
 ## 1. Export Field Notes from GPS to Excel
 
-Extract the relevant information, the field notes, from the GPS that is connected to any of the computer's inputs. It serves mainly to check for any mistakes made when pointing out before sending to [GSAK](https://gsak.net/index.php) application. In a first phase, Python extracts the main file and creates an Excel sheet with the data, line by line. Then the data is processed by a Macro in Visual Basic to make it more readable.<br/>
-Script compatible with all Garmin eTrex X GPS's category.
+Extract the relevant information, the field notes, from the GPS that is connected to any of the computer's inputs. It serves mainly to check for any mistakes made when pointing out before sending to [GSAK](https://gsak.net/index.php) application. In a first phase, Python extracts the copy of main file and creates an Excel sheet with the data, line by line. Then the data is processed by a Macro in Visual Basic to make it more readable.<br/>
+Script compatible at least with all Garmin eTrex X GPS's category.
 <br/>
 
 <img alignment = "center" src = "Images\Export.png" title = "Export" >
@@ -57,9 +57,31 @@ def Points_to_Area (points):
 
 <br/>
 
-## 3. Create a Database of words to bomb the solution checker.
+## 3. Create a Database with possible attemps. Use them with Brute Force.
 
-Soon
+### First part: Get all words from a website and push them to Excel
+
+more
+
+<br/>
+
+<img alignment = "center" src = "Images\Scheme.png" title = "Areas" >
+
+<br/>
+
+### Second part: Use them with Brute Force.
+
+more
+
+<br/>
+
+<img alignment = "center" src = "Images\Scheme.png" title = "Areas" >
+
+<br/>
+
+## 4. Periodic auto-backup of all my web pages.
+
+soon
 
 <br/>
 <br/>
