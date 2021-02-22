@@ -61,7 +61,7 @@ def Points_to_Area (points):
 
 ### 3.1 Get all words from a website and push them to Excel
 
-A script that analyzes any web page and removes all the words contained there. Applying various filters to the text, namely:
+A script that analyzes any webpage and pull all words contained there. Apply various filters to the text, namely:
 - removing punctuation, 
 - removing common words, 
 - removing repeated words, 
@@ -70,6 +70,8 @@ A script that analyzes any web page and removes all the words contained there. A
 - removing additional links.
 
 <br/>
+
+The result is what I show in the following figure. For example, in wikipédia [Portugal](https://pt.wikipedia.org/wiki/Portugal), the script generates in 3 seconds an Excel sheet with 10 columns and 351 lines, which means more than 3500 unique and ready-to-use words. There is also the option to sort by alphabetic order.
 
 <img alignment = "center" src = "Images\Base.PNG" title = "DataBase" >
 
