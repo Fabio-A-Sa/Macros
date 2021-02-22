@@ -71,7 +71,7 @@ A script that analyzes any web page and removes all the words contained there. A
 
 <br/>
 
-<img alignment = "center" src = "Images\DB.PNG" title = "DataBase" >
+<img alignment = "center" src = "Images\Base.PNG" title = "DataBase" >
 
 In addition, all words will be placed separately, 10 per line, in all available cells. Finally, apply a common Macro with Visual Basic to make all cells in the DataBase more readable.
 
