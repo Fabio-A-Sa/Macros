@@ -99,7 +99,7 @@ def brute_force () :
                 
                 to_write =  [
                                 solution,                   # <-- Solution that makes green checker
-                                current_time,               # <-- Year,Mouth,Day,Hour,Minute,Second
+                                current_time,               # <-- Year,Month,Day,Hour,Minute,Second
                                 current_cell_DataBase,      # <-- To search faster in DataBase
                                 main_HTML,                  # <-- Collect all HTML, CSS and JavaScript scripts
                             ]
