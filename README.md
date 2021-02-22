@@ -61,13 +61,19 @@ def Points_to_Area (points):
 
 ### First part: Get all words from a website and push them to Excel
 
-more
+A script that analyzes any web page and removes all the words contained there. Applying various filters to the text, namely:
+- removing punctuation, 
+- removing common words, 
+- removing repeated words, 
+- removing paragraphs, 
+- removing indexing numbers, 
+- removing additional links.
+
+In addition, all words will be placed separately, 10 per line, in all available cells. Finally, apply a common Macro with Visual Basic to make all cells in the DataBase more readable.
 
 <br/>
 
 <img alignment = "center" src = "Images\Part1.png" title = "Areas" >
-
-<br/>
 
 ### Second part: Use them with Brute Force.
 
