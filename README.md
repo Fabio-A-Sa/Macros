@@ -69,8 +69,6 @@ A script that analyzes any webpage and pull all words contained there. Apply var
 - removing indexing numbers, 
 - removing additional links.
 
-<br/>
-
 The result is what I show in the following figure. For example, in wikipédia [Portugal](https://pt.wikipedia.org/wiki/Portugal), the script generates in 3 seconds an Excel sheet with 10 columns and 351 lines, which means more than 3500 unique and ready-to-use words. There is also the option to sort by alphabetic order.
 
 <img alignment = "center" src = "Images\Base.PNG" title = "DataBase" >
