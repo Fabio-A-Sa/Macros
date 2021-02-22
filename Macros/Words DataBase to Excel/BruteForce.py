@@ -18,6 +18,8 @@ from selenium.webdriver.common.keys import Keys
 
 def get_data ():
     
+    # Function that takes
+    
     data = []
     document_path = pwd + title()
     wb = xlrd.open_workbook(document_path)
@@ -46,7 +48,7 @@ def brute_force():
     data = get_data()
     driver = webdriver.Chrome(path)
     
-    # Open the website and wait to load all the html code
+    # Open the website and wait to load all the HTML code
     driver.get(url)
     sleep(10)
     
@@ -64,10 +66,32 @@ def brute_force():
         
         search = driver.find_element_by_name('coordinates')
         search.send_keys(attemp + Keys.RETURN)
-        sleep(65)
-        search.send_keys("another_test" + Keys.RETURN)
         
-        if
+        # Load new page --> this takes a few seconds
+        sleep(5)
+        current_HTML = driver.page_source
+        
+        try:
+            green = driver.find_element_by_id('solution')
+        except:
+            green = "something"
+        
+        if green in str(current_HTML):
+            # Found solution! Let's save her in a txt file:
+            flag = flag and True
+            file_name = "Solution of " + driver.find_element_by_name('coordinates')
+            
+            with open:
+                solution = "The solution is {}.{}".format(attemp, "\n")
+                now = datetime.now()
+                current_time = now.strftime("%Y-%m-%d ")
+                current_cell_DataBase = tuple()
+                
+            shutil.move(file, current_pwd)
+            break
+        
+        # To guarantee a maximum of 10 attempts in 10 minutes
+        sleep(65)
         
     sleep(10)
     driver.close()
