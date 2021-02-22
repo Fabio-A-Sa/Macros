@@ -59,7 +59,7 @@ def Points_to_Area (points):
 
 ## 3. Create a Database with possible attemps. Use them with Brute Force.
 
-### First part: Get all words from a website and push them to Excel
+### 3.1 Get all words from a website and push them to Excel
 
 A script that analyzes any web page and removes all the words contained there. Applying various filters to the text, namely:
 - removing punctuation, 
@@ -69,13 +69,17 @@ A script that analyzes any web page and removes all the words contained there. A
 - removing indexing numbers, 
 - removing additional links.
 
+<br/>
+
+<img alignment = "center" src = "Images\DB.PNG" title = "DataBase" >
+
 In addition, all words will be placed separately, 10 per line, in all available cells. Finally, apply a common Macro with Visual Basic to make all cells in the DataBase more readable.
 
 <br/>
 
-<img alignment = "center" src = "Images\Part1.png" title = "DataBase" >
+<img alignment = "center" src = "Images\Part1.png" title = "Scheme" >
 
-### Second part: Use them with Brute Force.
+### 3.2 Use them with Brute Force
 
 Use Excel as a DataBase of previously selected and filtered words. Each word is injected into the verifier website through a bot, where it is tested. If you hit the key, it saves all in a text file (date, time, solution, resulting HTML code) and break a loop. If does not work, the bot returns to the database to push next word. The cycle continues at a frequency of approximately one word per minute (frequency adaptable to each situation) until the entire database is consumed.
 
