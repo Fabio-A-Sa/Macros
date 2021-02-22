@@ -22,7 +22,7 @@ def brute_force():
 
 
 
-
+global url, pwd
 url = "something.com"
 pwd = os.getcwd()
 

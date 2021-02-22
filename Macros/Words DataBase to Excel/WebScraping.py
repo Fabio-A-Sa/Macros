@@ -10,13 +10,13 @@ from datetime import datetime
 
 # Functions
 
-def do_request (link, alphabetic_order):
+def do_request (link):
     
     html = requests.get(link)
-    return get_text(html.text, alphabetic_order)
+    return get_text(html.text)
 
 
-def get_text (html, alphabetic_order):
+def get_text (html):
     
     def normalize (lines):
     
@@ -114,11 +114,12 @@ def to_excel (content):
 
 def start ():
 
+    global url, alphabetic_order
     url = str(input("Link: "))
     answer = str(input("Alphabetic order? Yes/No: "))
     alphabetic_order = True if answer.lower() == "yes" else False
 
-    return do_request (url, alphabetic_order)
+    return do_request (url)
 
 
 if __name__ == "__main__":
