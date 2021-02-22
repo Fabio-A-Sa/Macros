@@ -5,6 +5,7 @@ import shutil
 import requests
 import xlsxwriter
 import pandas as pd
+from WebScraping import title
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from xlsxwriter import Workbook
@@ -17,9 +18,12 @@ from selenium.webdriver.common.keys import Keys
 def get_data ():
     
     data = []
+    document_path = pwd + title()
+    document = pd.read_excel(document_path)
     
     
-    return None
+    
+    return data
 
 
 def brute_force():
@@ -42,7 +46,7 @@ def brute_force():
 
 global url, pwd, path
 url = "something.com"
-pwd = os.getcwd()
+pwd = "C:\\Users\\farau\Dropbox\\My PC (Fábio-MateBook)\\Desktop\\"
 path = "C:\Program Files (x86)\chromedriver.exe"
 
 if __name__ == "__main__":

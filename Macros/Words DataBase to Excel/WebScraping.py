@@ -2,6 +2,7 @@
 
 from bs4 import BeautifulSoup
 import requests
+import shutil
 from os import getcwd as pwd
 from string import punctuation, ascii_letters
 import xlsxwriter
@@ -78,19 +79,26 @@ def get_text (html):
             
     words = normalize(content)
     print(words)
-    return to_excel(words)
+    return excel(words)
 
 
-def to_excel (content):
+def title ():
     
     global date
     global current_directory
-    current_directory = pwd()
+
     current_day = datetime.now()
     date = current_day.strftime("%Y-%m-%d")
-    title = "DataBase " + content[0].capitalize() + " " + date
+    title = "DataBase " + date + ".xlsx"
 
-    workbook = xlsxwriter.Workbook(title + ".xlsx")
+    return title
+
+
+def excel (content):
+    
+
+    titled = title()
+    workbook = xlsxwriter.Workbook(title)
     Excel = workbook.add_worksheet(date)
       
     y = 0
@@ -110,6 +118,7 @@ def to_excel (content):
             y += 1
 
     workbook.close()
+    shutil.move(titled, pwd)
 
 
 def start ():
