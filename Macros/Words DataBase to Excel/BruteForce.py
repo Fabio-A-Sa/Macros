@@ -41,7 +41,7 @@ def get_data ():
 
 def brute_force():
     
-    # Developed for a specific online checker. For legal reasons I will not mention which one.
+    # Developed for a specific online checker. For many reasons I will not mention which one is.
 
     data = get_data()
     driver = webdriver.Chrome(path)
@@ -59,20 +59,23 @@ def brute_force():
     
     # Next pages:
     pointer = 1
-    flag = true
+    flag = False
     while attemp != data[-1]:
         
-        search = driver.find_element_by_id('solution')
+        search = driver.find_element_by_name('coordinates')
         search.send_keys(attemp + Keys.RETURN)
         sleep(65)
         search.send_keys("another_test" + Keys.RETURN)
         
         if
-    
-    sleep()
+        
+    sleep(10)
     driver.close()
     
-    return "Complete"
+    found_solution = flag 
+    if found_solution:
+        return "Successful search. Solution was saved in {} file".format(solution_id)
+    return "Current Database doesn't contain solution word"
 
 
 global url, pwd, path, current_pwd
