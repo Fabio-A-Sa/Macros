@@ -4,9 +4,9 @@
 <br/>
 
 ## Contents
-1. [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros-Excel#1-export-field-notes-from-gps-to-excel)
-2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros-Excel#2-get-all-coordinates-between-geocaches)
-3. [Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros-Excel#3-create-a-database-of-words-to-bomb-the-solution-checker)
+1. [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros#1-export-field-notes-from-gps-to-excel)
+2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros#2-get-all-coordinates-between-geocaches)
+3. [Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
 4. [Periodic auto-backup of all my web pages]()
 <br/>
 
@@ -65,7 +65,7 @@ more
 
 <br/>
 
-<img alignment = "center" src = "Images\Scheme.png" title = "Areas" >
+<img alignment = "center" src = "Images\Part1.png" title = "Areas" >
 
 <br/>
 
@@ -75,7 +75,7 @@ more
 
 <br/>
 
-<img alignment = "center" src = "Images\Scheme.png" title = "Areas" >
+<img alignment = "center" src = "Images\Part2.png" title = "Areas" >
 
 <br/>
 
