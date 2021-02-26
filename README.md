@@ -4,11 +4,16 @@
 <br/>
 
 ## Contents
-1. [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros#1-export-field-notes-from-gps-to-excel)
+
+Markup : - [ ] [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros#1-export-field-notes-from-gps-to-excel)
 2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros#2-get-all-coordinates-between-geocaches)
 3. [Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
 4. [Periodic auto-backup of all my web pages]()
 <br/>
+
+ Markup : - [ ] An uncompleted task
+          - [x] A completed task
+
 
 ## 1. Export Field Notes from GPS to Excel
 
