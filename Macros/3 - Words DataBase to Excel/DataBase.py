@@ -11,15 +11,59 @@ from datetime import datetime
 
 # Functions
 
-def do_request (link):
+def do_request (link) :
     
     html = requests.get(link)
     return get_text(html.text)
 
 
-def get_text (html):
+def title () :
     
-    def normalize (lines):
+    global date
+    global current_directory
+
+    current_day = datetime.now()
+    date = current_day.strftime("%Y-%m-%d")
+    title = "DataBase " + date + ".xlsx"
+
+    return title
+
+
+def settings () :
+
+    wordsByAttemp = "something"
+    order = "something"
+    url = "something"
+
+    options =   [
+                    "yes",
+                    "no",
+                ]
+
+    while ( "www" not in url and "." not in url and "http" not in url ):
+        url = str(input("Please enter a url")):
+        if ( "www" not in url and "." not in url and "http" not in url ):
+            print("URL invalid. Please try again")
+
+    while ( type(wordsByAttemp) != int and wordsByAttemp > 5 ):
+        wordsByAttemp = int(input("How many words would you like per attemp? "))
+        if type(wordsByAttemp) != int:
+            print("Please enter a integer number")
+        else if wordsByAttemp > 5:
+            print("Maximum words per attempt exceeded")
+
+    while (answer.lower() not in options):
+        answer = str(input("Alphabetic order? Yes/No: "))
+        if answer.lower() not in options:
+            print("Input {} is not valid. Please try again".format(answer))
+    alpOrder = True if answer.lower() == "yes" else False
+
+    return url, wordsByAttemp, alpOrder
+
+
+def get_text (html) :
+    
+    def normalize (lines) :
     
         numbers = [str(x) for x in range(10)]
         norm = []
@@ -79,19 +123,7 @@ def get_text (html):
     return excel(words)
 
 
-def title ():
-    
-    global date
-    global current_directory
-
-    current_day = datetime.now()
-    date = current_day.strftime("%Y-%m-%d")
-    title = "DataBase " + date + ".xlsx"
-
-    return title
-
-
-def excel (content):
+def excel (content) :
     
 
     titled = title()
@@ -118,15 +150,13 @@ def excel (content):
     shutil.move(titled, pwd)
 
 
-def start ():
+def start () :
 
-    global url, alphabetic_order
-    url = str(input("Link: "))
-    answer = str(input("Alphabetic order? Yes/No: "))
-    alphabetic_order = True if answer.lower() == "yes" else False
-
+    global url, wordsByAttemp, alpOrder = settings()
     return do_request (url)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
     start()
+
+print(settings())

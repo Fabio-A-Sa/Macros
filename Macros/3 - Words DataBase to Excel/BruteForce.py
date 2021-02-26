@@ -18,7 +18,7 @@ from selenium.webdriver.common.keys import Keys
 
 def get_data () :
     
-    # Function that removes from the Excel DataBase all data ready to be used by the Bot
+    # Function that removes from the Excel DataBase all data ready to be used by Bot
     
     data = []
     document_path = pwd + title()
