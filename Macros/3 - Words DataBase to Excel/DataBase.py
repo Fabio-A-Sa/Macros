@@ -71,25 +71,20 @@ def combinations(words, wordsByAttemp):
 
     def two_words () :
 
-        all_combinations = [w1+w2+w3 for w1 in words for 
-
-
+        all_combinations = [w1+w2 for w1 in words for w2 in words if w1 != w2] 
         return all_combinations
 
 
     def three_words() :
 
-        all_combinations = []
-
-
+        all_combinations = [w1+w2+w3 for w1 in words for w2 in words for w3 in words if w1 != w2 and w2 != w3 and w2 != w3] 
         return all_combinations
 
 
     def four_words():
 
-        all_combinations = []
-
-
+        all_combinations = [w1+w2+w3+w4 for w1 in words for w2 in words for w3 in words for w4 in words
+                            if w1 != w2 and and w1 != w3 and w1 != w4 and w2 != w3 and w2 != w4 and w3 != w4]
         return all_combinations
 
 
@@ -130,18 +125,31 @@ def get_text (html) :
                 if word not in trash_words and word not in norm:
                     
                     flag = False
+                    another_flag = False
+
                     for number in numbers:
                         for letter in ascii_letters:
                             flag = flag or (number in word and letter in word)
-                            
+
                     if not flag and word != "":
-                        norm.append(word)
+                        if not enabledNumbers:
+                            for number in numbers:
+                                another_flag = another_flag or (number in word)
+                            if another_flag:
+                                continue
+                            else:
+                                norm.append(word)
+                        else:
+                            norm.append(word)
+
         if alpOrder:
             norm = sorted(norm)
         if wordsByAttemp > 1:
             norm = combinations(norm, wordsByAttemp)
             if alpOrder:
                 norm = sorted(norm)
+            else:
+                continue
         return norm
     
     content = []
@@ -168,7 +176,6 @@ def get_text (html) :
 
 def excel (content) :
     
-
     titled = title()
     workbook = xlsxwriter.Workbook(title)
     Excel = workbook.add_worksheet(date)
@@ -195,7 +202,8 @@ def excel (content) :
 
 def start () :
 
-    global url, wordsByAttemp, alpOrder, numbers = settings()
+    global url, wordsByAttemp, alpOrder, enabledNumbers
+    url, wordsByAttemp, alpOrder, enabledNumbers = settings()
     return do_request (url)
 
 
