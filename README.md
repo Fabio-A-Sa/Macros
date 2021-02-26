@@ -5,25 +5,13 @@
 
 ## Contents
 
-Markup : - [ ] [Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros#1-export-field-notes-from-gps-to-excel)
-2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros#2-get-all-coordinates-between-geocaches)
-3. [Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
-4. [Periodic auto-backup of all my web pages]()
-
-### Solar System Exploration, 1950s – 1960s
-
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
-
-- [ ] An uncompleted task
-- [x] A completed task
+- [x] [1. Export Field Notes from GPS to Excel](https://github.com/Fabio-A-Sa/Macros#1-export-field-notes-from-gps-to-excel)
+- [x] [2. Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros#2-get-all-coordinates-between-geocaches)
+- [x] [3. Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
+    - [x] [3.1 Pull words from web and push them to Excel DataBase]() 
+    - [x] [3.2 Brute Force using DataBase]()
+    - [ ] [3.3 Auto-Send emails using DatBase]()
+- [ ] [4. Periodic auto-backup of web pages]()
 
 
 ## 1. Export Field Notes from GPS to Excel
