@@ -58,7 +58,47 @@ def settings () :
             print("Input {} is not valid. Please try again".format(answer))
     alpOrder = True if answer.lower() == "yes" else False
 
-    return url, wordsByAttemp, alpOrder
+    while (answer.lower() not in options):
+        answer = str(input("Attemps with numbers? Yes/No: "))
+        if answer.lower() not in options:
+            print("Input {} is not valid. Please try again".format(answer))
+    enabledNumbers = True if answer.lower() == "yes" else False
+
+    return url, wordsByAttemp, alpOrder, enabledNumbers
+
+
+def combinations(words, wordsByAttemp):
+
+    def two_words () :
+
+        all_combinations = [w1+w2+w3 for w1 in words for 
+
+
+        return all_combinations
+
+
+    def three_words() :
+
+        all_combinations = []
+
+
+        return all_combinations
+
+
+    def four_words():
+
+        all_combinations = []
+
+
+        return all_combinations
+
+
+    if wordsByAttemp == 2:
+        return two_words()
+    if wordsByAttemp == 3:
+        return three_words()
+    if wordsByAttemp == 4:
+        return four_words()
 
 
 def get_text (html) :
@@ -96,9 +136,12 @@ def get_text (html) :
                             
                     if not flag and word != "":
                         norm.append(word)
-        
-        if alphabetic_order:
-            return sorted(norm)
+        if alpOrder:
+            norm = sorted(norm)
+        if wordsByAttemp > 1:
+            norm = combinations(norm, wordsByAttemp)
+            if alpOrder:
+                norm = sorted(norm)
         return norm
     
     content = []
@@ -152,11 +195,9 @@ def excel (content) :
 
 def start () :
 
-    global url, wordsByAttemp, alpOrder = settings()
+    global url, wordsByAttemp, alpOrder, numbers = settings()
     return do_request (url)
 
 
 if __name__ == "__main__" :
     start()
-
-print(settings())
