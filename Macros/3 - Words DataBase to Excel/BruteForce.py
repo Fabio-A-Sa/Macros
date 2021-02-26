@@ -6,7 +6,7 @@ import requests
 import xlsxwriter
 import xlrd
 import pandas as pd
-from WebScraping import title
+from DataBase import title
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from xlsxwriter import Workbook
