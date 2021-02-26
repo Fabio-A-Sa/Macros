@@ -9,10 +9,21 @@ Markup : - [ ] [Export Field Notes from GPS to Excel](https://github.com/Fabio-A
 2. [Get all Coordinates between Geocaches](https://github.com/Fabio-A-Sa/Macros#2-get-all-coordinates-between-geocaches)
 3. [Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
 4. [Periodic auto-backup of all my web pages]()
-<br/>
 
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
+### Solar System Exploration, 1950s – 1960s
+
+- [ ] Mercury
+- [x] Venus
+- [x] Earth (Orbit/Moon)
+- [x] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
+
+- [ ] An uncompleted task
+- [x] A completed task
 
 
 ## 1. Export Field Notes from GPS to Excel
