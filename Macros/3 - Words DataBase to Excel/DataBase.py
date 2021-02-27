@@ -41,7 +41,7 @@ def settings () :
                 ]
 
     while ( "www" not in url and "." not in url and "http" not in url ):
-        url = str(input("Please enter a url")):
+        url = str(input("Please enter a url"))
         if ( "www" not in url and "." not in url and "http" not in url ):
             print("URL invalid. Please try again")
 
@@ -49,7 +49,7 @@ def settings () :
         wordsByAttemp = int(input("How many words would you like per attemp? "))
         if type(wordsByAttemp) != int:
             print("Please enter a integer number")
-        else if wordsByAttemp > 5:
+        elif wordsByAttemp > 5:
             print("Maximum words per attempt exceeded")
 
     while (answer.lower() not in options):
@@ -84,7 +84,7 @@ def combinations(words, wordsByAttemp):
     def four_words():
 
         all_combinations = [w1+w2+w3+w4 for w1 in words for w2 in words for w3 in words for w4 in words
-                            if w1 != w2 and and w1 != w3 and w1 != w4 and w2 != w3 and w2 != w4 and w3 != w4]
+                            if w1 != w2 and w1 != w3 and w1 != w4 and w2 != w3 and w2 != w4 and w3 != w4]
         return all_combinations
 
 
@@ -94,6 +94,7 @@ def combinations(words, wordsByAttemp):
         return three_words()
     if wordsByAttemp == 4:
         return four_words()
+        
 
 
 def get_text (html) :
@@ -148,8 +149,7 @@ def get_text (html) :
             norm = combinations(norm, wordsByAttemp)
             if alpOrder:
                 norm = sorted(norm)
-            else:
-                continue
+                
         return norm
     
     content = []

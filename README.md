@@ -10,7 +10,7 @@
 - [x] [3. Create a Database with possible attemps. Use them with Brute Force.](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
     - [x] [3.1 Pull words from web and push them to Excel DataBase]() 
     - [x] [3.2 Brute Force using DataBase]()
-    - [ ] [3.3 Auto-Send emails using DatBase]()
+    - [ ] [3.3 Auto-Send emails using DataBase]()
 - [ ] [4. Periodic auto-backup of web pages]()
 
 
