@@ -74,19 +74,16 @@ def combinations(words, wordsByAttemp):
         all_combinations = [w1+w2 for w1 in words for w2 in words if w1 != w2] 
         return all_combinations
 
-
     def three_words() :
 
         all_combinations = [w1+w2+w3 for w1 in words for w2 in words for w3 in words if w1 != w2 and w2 != w3 and w2 != w3] 
         return all_combinations
-
 
     def four_words():
 
         all_combinations = [w1+w2+w3+w4 for w1 in words for w2 in words for w3 in words for w4 in words
                             if w1 != w2 and w1 != w3 and w1 != w4 and w2 != w3 and w2 != w4 and w3 != w4]
         return all_combinations
-
 
     if wordsByAttemp == 2:
         return two_words()
@@ -95,7 +92,6 @@ def combinations(words, wordsByAttemp):
     if wordsByAttemp == 4:
         return four_words()
         
-
 
 def get_text (html) :
     
