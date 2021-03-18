@@ -12,7 +12,7 @@
     - [x] [3.2 Brute Force using DataBase]()
     - [ ] [3.3 Auto-Send emails using DataBase]()
 - [x] [4. Ciphers](https://github.com/Fabio-A-Sa/Macros#3-create-a-database-with-possible-attemps-use-them-with-brute-force)
-    - [x] [4.1 Numbers <--> letters]() 
+    - [x] [4.1 Numbers or letters]() 
     - [x] [4.2 Get Coordinates]()
     - [ ] [4.3 Morse code]()
 - [ ] [5. Periodic auto-backup of web pages]()
@@ -95,7 +95,13 @@ Use Excel as a DataBase of previously selected and filtered words. Each word is 
 
 <br/>
 
-## 4. Periodic auto-backup of all my web pages.
+## 4. Ciphers
+
+description soon
+
+<br/>
+
+## 5. Periodic auto-backup of all my web pages.
 
 soon
 
