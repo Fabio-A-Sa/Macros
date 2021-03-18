@@ -1,4 +1,4 @@
-# Modules that can be mod 
+# Modules that can be modified or added as needed. Support file for the construction of macros.
 
 class coordinates:
 
