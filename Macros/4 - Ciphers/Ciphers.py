@@ -1,14 +1,19 @@
 # Modules that can be mod 
 
-def coordinates():
+class coordinates:
 
     def default():
-        N = "N 41 "
-        W = "W 008 "
+        N = "N 41"
+        W = "W 008"
         return N, W
 
     def personalize():
         print("soon")
 
-def morse():
-    print("soon")
+class ciphers:  
+
+    def morse():
+        print("soon")
+
+    def binary():
+        print("soon")
