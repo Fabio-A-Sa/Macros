@@ -1,15 +1,29 @@
 from Modules import coordinates
 import NumbersAndLetters
 
-def generate():
+def generate(message):
+
+    def filter_impossible_attemps(message):
+
+        some = []
+        for number in message:
+
+            
+
+        return some
 
     attemps = []
+    pairs = [(p1.strip(), p2.strip()) for p1 in message for p2 in message]
 
+    for p1, p2 in pairs:
+        attemp = header1 + " " + p1 + " " + header2 + " " + p2
+        attemps.append(attemp)
 
-    for attem in attemps:
+    for attemp in attemps:
         print(attemp)
 
     return attemps
+
 
 def start():
 
@@ -19,9 +33,9 @@ def start():
         header1, header2 = coordinates.personalize()
     else:
         header1, header2 = coordinates.default()
-    message = str(input("Input yours attemps:"))
+    message = str(input("Numbers: "))
     
-    return generate(message)    
+    return generate(message.split(" "))    
 
 
 if __name__ == "__main__":
