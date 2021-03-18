@@ -1,24 +1,32 @@
 from string import ascii_lowercase as abc
 numbers = [str(x) for x in range(0, 10)]
-global offset
 
 def numbers_to_letters (message) :
 
     solution = ""
     for character in message.lower():
-        solution + " "
+        try:
+            solution = solution + abc[int(character) - offset]
+        except ValueError:
+            solution = solution + character
         
     return solution
 
 def letters_to_numbers (message) :
     
-    return None
+    solution = ""
+    for character in message.lower():
+        if character in abc:
+            solution = solution + str(int(abc.find(character) + offset))
+        else:
+            solution = solution + character
 
-
+    return solution
 
 def start():
 
     message = str(input("Your message: ")).strip().lower()
+    global offset
     try:
         offset = int(input("A = "))
     except ValueError:
