@@ -1,5 +1,6 @@
 # FAS GSAK
 
+
 // Filter by status
 
 $status = sqlite("sql",$_SqlGrid, "sqlget=yes")
@@ -9,13 +10,16 @@ while not($_sqleol)
   sqlnext
 Endwhile
 
+
 // Filter by dificulty
 
 $test = "$d_Difficulty"
 
+
 // Another filter
 
 $data = sqlite("sql","Select * from caches where difficulty = $d_difficulty","")
+
 
 // Order and sorted
 
@@ -27,6 +31,7 @@ SQLSort OrderBy=Terrain Asc, Difficulty desc
 # Now finally restore our current sort sequence
 SQLSort OrderBy=$CurrentSort
 
+
 // _SqlGrid
 
 $status = sqlite("sql",$_SqlGrid, "sqlget=yes")
@@ -35,6 +40,7 @@ while not($_sqleol)
   $data = $data + sqlget("code") + sqlget("name") + sqlget("userdata") + $_Crlf
   sqlnext
 Endwhile
+
 
 // today message
 
