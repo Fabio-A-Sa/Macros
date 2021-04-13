@@ -107,6 +107,3 @@ code = "bch.ga dc.ag bia.jeh bf.jjj hc.gda bf.jjj ea.ahi bc.abb b.aai bbe.ibi gj
 decrypt_A0(code)
 decrypt_A1(code)
 print(get_coordinates(numbers))
-
- 
-
