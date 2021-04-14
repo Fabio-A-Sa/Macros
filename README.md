@@ -97,7 +97,7 @@ Use Excel as a DataBase of previously selected and filtered words. Each word is 
 
 ## 4. Ciphers
 
-description soon. Modules available.
+description soon. Modules available soon.
 
 <br/>
 
